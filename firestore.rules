@@ -1,0 +1,13 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /leads/{leadId} {
+      allow read: if request.auth != null
+                  && resource.data.clienteId == request.auth.uid;
+
+      // As escritas sao feitas apenas pela API com o Firebase Admin SDK.
+      allow create, update, delete: if false;
+    }
+  }
+}
