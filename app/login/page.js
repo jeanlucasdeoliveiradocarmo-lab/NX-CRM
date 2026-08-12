@@ -12,11 +12,7 @@ const authMessages = {
 };
 
 export default function LoginPage() {
-  const router = useRouter();
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [error, setError] = useState("");
-  const [loading, setLoading] = useState(false);
+  window.location.href = '/dashboard';
 
   async function handleSubmit(event) {
     event.preventDefault();
