@@ -73,10 +73,15 @@ export default function DashboardPage() {
     };
   }, [router]);
 
-  async function handleLogout() {
+  const handleLogout = async () => {
+  try {
     await signOut(auth);
-    router.replace("/login");
+    // Em vez de router.push, use window.location para limpar o cache do navegador
+    window.location.href = '/login';
+  } catch (error) {
+    console.error("Erro ao sair:", error);
   }
+};
 
   return (
     <main className="min-h-screen bg-slate-100">
