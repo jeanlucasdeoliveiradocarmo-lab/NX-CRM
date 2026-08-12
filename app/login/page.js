@@ -12,7 +12,7 @@ const authMessages = {
 };
 
 export default function LoginPage() {
-  window.location.href = '/dashboard';
+  window.location.href = '/dashboard'};
 
   async function handleSubmit(event) {
     event.preventDefault();
