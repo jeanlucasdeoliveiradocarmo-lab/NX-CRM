@@ -74,13 +74,8 @@ export default function DashboardPage() {
   }, [router]);
 
   const handleLogout = async () => {
-  try {
-    await signOut(auth);
-    // Em vez de router.push, use window.location para limpar o cache do navegador
-    window.location.href = '/login';
-  } catch (error) {
-    console.error("Erro ao sair:", error);
-  }
+  await signOut(auth);
+  window.location.href = '/login';
 };
 
   return (
