@@ -1,7 +1,7 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "CRM Firebase",
+  title: "NX CRM",
   description: "CRM simples com Next.js, Firebase e Tailwind CSS",
 };
 
